@@ -128,6 +128,11 @@ public abstract class Gui extends JFrame implements ActionListener {
 
                 String gender = male.isSelected() ? "male" : "female";
 
+                if (!robot.isSelected()) {
+                    JOptionPane.showMessageDialog(null, "Please confirm you are not a robot!");
+                    return; // Stop further execution
+                }
+
 
 
                 JDBC jdbc = new JDBC();
